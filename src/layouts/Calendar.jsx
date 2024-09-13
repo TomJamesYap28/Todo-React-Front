@@ -2,50 +2,27 @@ import React, { useState, useRef } from 'react';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import listPlugin from '@fullcalendar/list';
+import interactionPlugin from '@fullcalendar/interaction';
 import { CalendarAddModal, CalendarEditModal } from '../assets/hooks/Modals.jsx';
 
-function Calendar({ isAdmin }) {
-  const calendarRef = useRef(null);
+function Calendar() {
   const [selectedDate, setSelectedDate] = useState('');
-  const [editEventData, setEditEventData] = useState(null);
+  const [showModal, setShowModal] = useState(false);
 
   const handleDateClick = (info) => {
-    if (isAdmin) {
-      clearForm('taskForm');
-      setSelectedDate(info.dateStr); // Set the selected date for the modal
-      window.$('#addtaskModal').modal('show'); // Show the add event modal
-    }
+    setSelectedDate(info.dateStr);
+    setShowModal(true);
   };
 
-  const handleEventClick = (info) => {
-    if (isAdmin) {
-      const event = info.event;
-      setEditEventData({
-        id: event.id,
-        date: event.startStr,
-        title: event.title,
-        description: event.extendedProps.description,
-      }); // Set the event data for editing
-      window.$('#editTaskModal').modal('show'); // Show the edit event modal
-    }
-  };
-
-  const clearForm = (formId) => {
-    const form = document.getElementById(formId);
-    if (form) {
-      form.reset();
-      const hiddenInputs = form.querySelectorAll('input[type="hidden"]');
-      hiddenInputs.forEach((input) => {
-        input.value = '';
-      });
-    }
+  const handleCloseModal = () => {
+    setShowModal(false);
   };
 
   return (
     <div className="calendar">
       <FullCalendar
-        plugins={[dayGridPlugin, listPlugin]}
-        selectable={isAdmin}
+        plugins={[dayGridPlugin, listPlugin, interactionPlugin]}
+        selectable={true}
         customButtons={{
             filterDropdown: {
                 text: 'Filter',
@@ -63,8 +40,9 @@ function Calendar({ isAdmin }) {
         // eventDidMount={handleEventMount}
       />
 
-      <CalendarAddModal selectedDate={selectedDate} />
-      <CalendarEditModal editEventData={editEventData} />
+      {showModal && (
+        <CalendarAddModal selectedDate={selectedDate} onClose={handleCloseModal} />
+      )}
     </div>
   );
 }

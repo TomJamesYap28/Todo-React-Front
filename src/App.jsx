@@ -8,14 +8,15 @@ import './../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './../node_modules/bootstrap/dist/js/bootstrap.bundle.js';
 import './../node_modules/boxicons/css/boxicons.min.css';
 import './index.css';
+import './assets/css/Sidebar.css';
+import './assets/css/Dashboard.css';
 
 function App() {
-  return(
-    <div>
-        <Sidebar />
-        <Dashboard />
+  return (
+    <div className="sidebarbody">
+      <Sidebar />
+      <Dashboard />
     </div>
-    // <Login />
   );
 }
 

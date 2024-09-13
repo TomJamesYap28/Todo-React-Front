@@ -1,3 +1,4 @@
+
 import welcomeicon from '../img/avento.gif';
 import riceicon from '../img/rice.jpg';
 import pendingicon from '../img/history.png';
@@ -7,7 +8,7 @@ import dueicon from '../img/deadline.png';
 import announcementicon from '../img/loud.png';
 import logoicon from '../img/logo.png';
 
-const icons = {
+const IconsImports = {
     welcomeicon,
     riceicon,
     pendingicon,
@@ -18,4 +19,4 @@ const icons = {
     logoicon
 }
 
-export default icons;
+export default IconsImports;

@@ -1,5 +1,5 @@
-import '../assets/css/Dashboard.css';
-import icons  from '../assets/js/Icons.js';
+import React from 'react';
+import IconsImports  from '../assets/js/Imports.js';
 import Calendar from './Calendar.jsx';
 
 function Dashboard() {
@@ -15,7 +15,7 @@ function Dashboard() {
                                 <p>Manage your task efficiently and stay organized.</p>
                             </div>
                             <div>
-                                <img src={icons.welcomeicon} alt="Welcome GIF" style={{height: "190px", width: "350px", borderTopRightRadius: "1rem"}}/>
+                                <img src={IconsImports.welcomeicon} alt="Welcome GIF" style={{height: "190px", width: "350px", borderTopRightRadius: "1rem"}}/>
                             </div>
                         </div>
                     </div>
@@ -23,7 +23,7 @@ function Dashboard() {
                 <div className="col-4">
                     <div className="card" style={{backgroundColor: "white", height: "170px"}}>
                         <div className="card-body d-flex align-items-center;" style={{padding: "0"}}>
-                            <img src={icons.riceicon} alt="Cook Image" style={{width: "150px", height: "150px", margin: "10px", borderTopLeftRadius: "1rem", borderBottomLeftRadius: "1rem"}}/>
+                            <img src={IconsImports.riceicon} alt="Cook Image" style={{width: "150px", height: "150px", margin: "10px", borderTopLeftRadius: "1rem", borderBottomLeftRadius: "1rem"}}/>
                             <div className="content" style={{flexGrow: "1", textAlign: "center", margin: "45px 30px 30px 0"}}>
                                 <div className="card-title" style={{margin: "10px 0 0 0"}}>
                                     <h5><strong>Assigned Cook for Today</strong></h5>
@@ -43,7 +43,7 @@ function Dashboard() {
                 <div className="col">
                     <div className="card" style={{ backgroundColor: "lightyellow"}}>
                         <div className="card-body">
-                            <img src={icons.pendingicon} alt="done" style={{width: "50px"}}/>
+                            <img src={IconsImports.pendingicon} alt="done" style={{width: "50px"}}/>
                             <h2 className="card-title mt-2"></h2>
                             <p className="card-text">Pending Tasks</p>
                         </div>
@@ -52,7 +52,7 @@ function Dashboard() {
                 <div className="col">
                     <div className="card" style={{ backgroundColor: "lightcyan"}}>
                         <div className="card-body">
-                            <img src={icons.progressicon} alt="done" style={{width: "50px"}}/>
+                            <img src={IconsImports.progressicon} alt="done" style={{width: "50px"}}/>
                             <h2 className="card-title mt-2"></h2>
                             <p className="card-text">In Progress Tasks</p>
                         </div>
@@ -61,7 +61,7 @@ function Dashboard() {
                 <div className="col">
                     <div className="card" style={{ backgroundColor: "honeydew"}}>
                         <div className="card-body">
-                            <img src={icons.completeicon} alt="done" style={{width: "50px"}}/>
+                            <img src={IconsImports.completeicon} alt="done" style={{width: "50px"}}/>
                             <h2 className="card-title mt-2"></h2>
                             <p className="card-text">Completed Tasks</p>
                         </div>
@@ -70,7 +70,7 @@ function Dashboard() {
                 <div className="col">
                     <div className="card" style={{ backgroundColor: "mistyrose"}}>
                         <div className="card-body">
-                            <img src={icons.dueicon} alt="done" style={{width: "50px"}}/>
+                            <img src={IconsImports.dueicon} alt="done" style={{width: "50px"}}/>
                             <h2 className="card-title mt-2"></h2>
                             <p className="card-text">Past Due Tasks</p>
                         </div>
@@ -81,7 +81,7 @@ function Dashboard() {
                 <div className="col">
                     <div className="card" style={{borderRadius: "2rem"}}>
                         <div className="card-body" style={{position: "relative", height: "450px"}}>
-                            <img src={icons.announcementicon} alt="done" className='overlay-img'></img>
+                            <img src={IconsImports.announcementicon} alt="done" className='overlay-img'></img>
                             <h2 className="card-title1">ANNOUNCEMENT</h2>
                             <div className="announcementCarousel" id="carousel slide" data-ride="carousel">
                                 <div className="carousel-inner">
@@ -117,7 +117,7 @@ function Dashboard() {
                     <div className="card" style={{backgroundColor: "white", height: "450px", position: "relative"}}>
                         <div className="card-header2 d-flex align-items-center justify-content-center" style={{position: "relative", padding: "20px"}}>
                             <h2 className="card-title2" style={{margin: "0", display: "flex", alignItems: "center"}}>Finished Tasks
-                                <img src={icons.logoicon} alt="done" className="overlay-img2" style={{marginLeft: "10px"}}/>
+                                <img src={IconsImports.logoicon} alt="done" className="overlay-img2" style={{marginLeft: "10px"}}/>
                             </h2>
                         </div>
                         <div className="card-body d-flex align-items center justify-content-center" style={{height: "100%"}}>

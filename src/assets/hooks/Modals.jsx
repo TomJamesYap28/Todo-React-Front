@@ -1,15 +1,15 @@
 import React from 'react';
 
 // ADD EVENT MODAL CALENDAR
-export const CalendarAddModal = () => {
+export const CalendarAddModal = ({ selectedDate, onClose }) => {
   return (
     <section>
-      <div className="modal fade" id="addtaskModal" tabIndex="-1" role="dialog" aria-labelledby="addtaskModalLabel" aria-hidden="true">
+      <div className="modal fade show" style={{ display: 'block' }} role="dialog" aria-labelledby="addtaskModalLabel" aria-hidden="true">
         <div className="modal-dialog" role="document">
           <div className="modal-content">
             <div className="modal-header">
               <h5 className="modal-title" id="addtaskModalLabel">Caravan or BSP</h5>
-              <button type="button" className="close" data-bs-dismiss="modal" aria-label="Close">
+              <button type="button" className="close" onClick={onClose} aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -17,12 +17,12 @@ export const CalendarAddModal = () => {
               <div className="taskForm">
                 <input type="hidden" defaultValue="add" name="trans" className="form-control"/>
                 <div className="form-group">
-                  <label htmlFor="date">Select Date</label>
-                  <input type="text" id="date" name="date" className="form-control" />
+                  <label htmlFor="date">Selected Date</label>
+                  <input type="text" id="date" name="date" className="form-control" value={selectedDate} readOnly />
                 </div>
                 <div className="form-group">
                   <label htmlFor="title">Title</label>
-                  <select name="title" id="title">
+                  <select name="title" id="title" className="form-control">
                     <option value="CARAVAN">CARAVAN</option>
                     <option value="BSP">BSP</option>
                     <option value="REMINDER">REMINDER</option>
