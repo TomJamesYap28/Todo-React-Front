@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import IconsImports from '../assets/js/Imports.js';
 import Sidebarhooks from '../assets/hooks/Sidebarhooks';
 
@@ -22,28 +23,28 @@ function Sidebar() {
                 <div className="menu">
                     <ul className="menu-links">
                         <li className="nav-link">
-                            <a href="">
+                            <Link to="/">
                                 <i className="bx bxs-dashboard icon"></i>
                                 <span className="text nav-text">Dashboard</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-link">
-                            <a href="">
+                            <Link to="/tasklist">
                                 <i className="bx bxs-note icon"></i>
                                 <span className="text nav-text">Task List</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-link">
-                            <a href="">
+                            <Link to="/announcement">
                                 <i className="bx bxs-megaphone icon"></i>
                                 <span className="text nav-text">Announcement</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-link">
-                            <a href="">
+                            <Link to="/user">
                                 <i className="bx bxs-user-circle icon"></i>
-                                <span className="text nav-text">User</span>
-                            </a>
+                                <span className="text nav-text">User</span>                           
+                            </Link>
                         </li>
                     </ul>
                 </div>

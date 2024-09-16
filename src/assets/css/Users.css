@@ -1,0 +1,199 @@
+
+.heading {
+    background: transparent;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 25px;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+    border-radius: 2rem;
+    padding: 15px;
+}
+
+label {
+    font-size: 12px;
+}
+
+.search-field {
+    border-radius: 20px;
+    width: 300px;
+    height: 40px;
+    border-color: #034077;
+    font-size: 15px;
+}
+
+.input-area {
+    margin: 30px 0 30px 0;
+    padding: 0 10px;
+    width: 90%;
+    text-align: right;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    height: 40px;
+    border: 1px solid lightgrey !important;
+    border-radius: 2rem;
+    padding: 5px 5px 5px 10px !important;
+    font-size: 12px !important;
+}
+
+.form-group textarea {
+    width: 100%;
+    border: 1px solid lightgrey !important;
+    border-radius: 1rem;
+    padding: 5px 5px 5px 10px;
+    font-size: 12px !important;
+}
+
+.user-btn-add {
+    width: 100px;
+    height: 40px;
+    border-radius: 50px;
+    color: white;
+    font-weight: 900;
+    font-size: 12px;
+    background-color: #034077;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-btn-add:hover {
+    border: #00aeef;
+    background: linear-gradient(131deg, #038ceb 26.77%, #18c9fe 95%);
+}
+
+.user-btn-edit {
+    width: 100px;
+    height: 40px;
+    border-radius: 50px;
+    color: white;
+    font-weight: 900;
+    font-size: 12px;
+    background-color: #034077;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.user-btn-edit:hover {
+    border: #00aeef;
+    background: linear-gradient(131deg, #038ceb 26.77%, #18c9fe 95%);
+}
+
+.user-btn-remove {
+    width: 100px;
+    height: 40px;
+    border-radius: 50px;
+    color: white;
+    font-weight: 900;
+    font-size: 12px;
+    background-color: #034077;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-btn-remove:hover {
+    border: #00aeef;
+    background: linear-gradient(131deg, #038ceb 26.77%, #18c9fe 95%);
+}
+
+button:focus {
+    outline: none !important;
+}
+
+.user-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    min-width: 150px;
+}
+
+.user-card-body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.user-circle {
+    font-size: 60px;
+}
+
+.user-circle.guest {
+    color: #000000;
+}
+
+.user-circle.admin {
+    color: #28a745;
+}
+
+
+.user-info {
+    text-align: center;
+}
+
+.user-info h5 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.user-info p {
+    margin: 0;
+    color: #6c757d;
+}
+
+.user-actions {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#userContainer {
+    max-height: 600px;
+    overflow-y: auto;
+    padding-right: 15px; /* To avoid the content being hidden behind the scrollbar */
+}
+
+@media (max-width: 768px) {
+    .user-card {
+        margin-bottom: 15px;
+    }
+}
