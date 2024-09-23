@@ -7,6 +7,7 @@ import completeicon from '../img/verify.png';
 import dueicon from '../img/deadline.png';
 import announcementicon from '../img/loud.png';
 import logoicon from '../img/logo.png';
+import meetingicon from '../img/meeting.png';
 
 const IconsImports = {
     welcomeicon,
@@ -16,7 +17,8 @@ const IconsImports = {
     completeicon,
     dueicon,
     announcementicon,
-    logoicon
+    logoicon,
+    meetingicon
 }
 
 export default IconsImports;

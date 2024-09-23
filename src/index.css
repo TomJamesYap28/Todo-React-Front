@@ -17,11 +17,10 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   background-color: whitesmoke;
   border-radius: 2rem;
-  padding:0 0 15px 0;
+  padding: 0 0 15px 0;
 }
 
 label {
@@ -29,30 +28,26 @@ label {
 }
   
 .input-area {
-  margin: 30px 0 30px 0;
+  margin: 30px 0;
   padding: 0 10px;
   width: 90%;
   text-align: right;
 }
 
-.form-group input, .form-group select {
+.form-group input, .form-group select, .form-group textarea {
   width: 100%;
   height: 40px;
-  border: 1px solid lightgrey!important;
-  border-radius: 2rem;
-  padding: 5px 5px 5px 10px!important;
-  font-size: 12px!important;
-}
-
-.form-group textarea {
-  width: 100%;
   border: 1px solid lightgrey !important;
-  border-radius: 1rem;
-  padding: 5px 5px 5px 10px;
+  border-radius: 2rem;
+  padding: 5px 10px !important;
   font-size: 12px !important;
 }
 
-.btn-add {
+textarea {
+  border-radius: 1rem !important;
+}
+
+.btn-add, .btn-edit {
   width: 100px;
   height: 40px;
   border-radius: 50px;
@@ -61,28 +56,9 @@ label {
   font-size: 12px;
   background-color: #034077;
   border: none;
-  float: right;
 }
 
-.btn-add:hover {
-  border: #00aeef;
-  background: linear-gradient(131deg, #038ceb 26.77%, #18c9fe 95%);
-}
-
-.btn-edit {
-  width: 100px;
-  height: 40px;
-  border-radius: 50px;
-  color: white;
-  font-weight: 900;
-  font-size: 12px;
-  background-color: #034077;
-  border: none;
-  float: right;
-}
-
-.btn-edit:hover {
-  border: #00aeef;
+.btn-add:hover, .btn-edit:hover {
   background: linear-gradient(131deg, #038ceb 26.77%, #18c9fe 95%);
 }
 
@@ -97,43 +73,16 @@ table {
   background-color: whitesmoke;
 }
 
-th {
+th, td {
   font-size: 12px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-tbody {
-  padding: 3px;
-  font-size: 12px !important;
-}
-
-td {
   padding: 5px;
 }
 
 .action {
   text-align: center;
-  border: none !important;
 }
 
-.action a {
-  display: inline-block;
-  margin: 5px;
-  text-align: center;
-}
-
-.btn-completed {
-  text-decoration: none;
-  width: 28px;
-  font-size: 14px;
-  color: white;
-  border-radius: 8px;
-  text-align: center;
-}
-
-.btn-remove {
-  text-decoration: none;
+.btn-completed, .btn-remove {
   width: 28px;
   font-size: 14px;
   color: white;
@@ -145,42 +94,20 @@ td {
   border-radius: 2rem !important;
 }
 
-/* Datatable */
-.table td,
-.table th {
-  vertical-align: middle !important;
-}
-
-table.dataTable.no-footer {
-  border-bottom: none !important;
-}
-
-table.dataTable {
-  border-collapse: collapse !important;
-}
-
+/* Datatable Adjustments */
 .table-responsive {
-  width: 97%!important;
-  text-align: center!important;
+  width: 97% !important;
 }
 
 .dataTables_wrapper .dataTables_filter input {
-  border-radius: 20px!important;
+  border-radius: 20px !important;
 }
 
 .container {
-  width: 100%!important;
-  height: 90%!important;
+  width: 100% !important;
 }
 
-.col-12 {
-  flex: none!important;
-}
-/* Login */
-.col {
-  padding: 0% !important;
-}
-
+/* Login Page Styling */
 .login-container {
   display: flex;
   justify-content: center;
@@ -282,4 +209,20 @@ table.dataTable {
 
 #anchorlogout {
   text-decoration: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .row {
+    display: block; /* stack the items vertically */
+  }
+
+  .col {
+    width: 100%;
+    margin-bottom: 20px; /* Add space between stacked items */
+  }
+
+  .btn-add, .btn-edit {
+    width: 100%; /* Full width buttons for mobile */
+  }
 }
