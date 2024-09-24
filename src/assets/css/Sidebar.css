@@ -85,14 +85,20 @@
 
 .sidebar.close .text {
     opacity: 0;
+    pointer-events: none; /* Ensure collapsed text doesn't block hovering */
 }
 
 .sidebar header {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
 }
 
 .sidebar header .image-text {
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -160,7 +166,7 @@ header .image-text .name {
 }
 
 .sidebar .menu-bar {
-    height: calc(100% - 55px);
+    height: calc(100% - 100px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -205,16 +211,25 @@ header .image-text .name {
     opacity: 0;
 }
 
+.menu-bar .bottom-content {
+    padding-left: 10px;
+    margin-bottom: 20px; /* Ensure the bottom items aren't cut off */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Aligns items to the bottom */
+    gap: 10px; /* Adds space between the items */
+}
+
+.menu-bar .bottom-content li {
+    display: flex;
+    justify-content: flex-start; /* Ensure icon and text are aligned left */
+}
+
 .menu-bar .bottom-content .toggle-switch {
-    position: absolute;
-    right: 0;
-    height: 100%;
-    min-width: 60px;
+    height: 50px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 6px;
-    cursor: pointer;
+    justify-content: space-between;
 }
 
 .toggle-switch .switch {
@@ -243,6 +258,19 @@ header .image-text .name {
     left: 20px;
 }
 
+.sidebar.close .bottom-content {
+    justify-content: flex-start;
+    padding-left: 0;
+}
+
+.sidebar.close .bottom-content .mode-text {
+    display: none; /* Hide "Dark Mode" text in collapsed mode */
+}
+
+.sidebar.close .toggle-switch {
+    margin-left: 10px;
+}
+
 .home {
     position: absolute;
     top: 0;
@@ -268,10 +296,6 @@ header .image-text .name {
 
 .sidebarbody.dark .home .text {
     color: var(--text-color);
-}
-
-.home {
-    justify-content: space-between;
 }
 
 .btn {
