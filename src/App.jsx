@@ -13,6 +13,7 @@ import './assets/css/Sidebar.css';
 import './assets/css/Dashboard.css';
 import './assets/css/Tasklist.css';
 import './assets/css/Users.css';
+import './assets/css/Modal.css';
 
 function App() {
   return (

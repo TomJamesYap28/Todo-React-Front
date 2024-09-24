@@ -7,11 +7,11 @@ function Dashboard() {
     return (
         <section className="home" id="contentSection">
             <div className="row mt-5">
-                <div className="col-8">
+                <div className="col-lg-8 col-md-12">
                     <div className="card welcome-card">
                         <div className="card-body welcome-card-body">
                             <div className="welcome-text">
-                                <h3>Welcome back, </h3>
+                                <h3><strong>Welcome back, </strong></h3>
                                 <p>Manage your task efficiently and stay organized.</p>
                             </div>
                             <div className="welcome-image">
@@ -20,7 +20,8 @@ function Dashboard() {
                         </div>
                     </div>
                 </div>
-                <div className="col-4">
+
+                <div className="col-lg-4 col-md-12">
                     <div className="card assigned-cook-card">
                         <div className="card-body assigned-cook-body d-flex align-items-center">
                             <img src={IconsImports.riceicon} alt="Cook Image" className="cook-img" />

@@ -1,0 +1,107 @@
+/* Modal Styling */
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.modal-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #034077; /* Custom color for title */
+}
+
+.close {
+    font-size: 1.2rem;
+    color: #333;
+    opacity: 0.8;
+}
+
+.close:hover {
+    opacity: 1;
+    color: #000;
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 15px 20px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    height: 120px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    background-color: #f9f9f9;
+}
+
+.form-group input[readonly] {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Button Styling */
+.btn-add2 {
+    background-color: #034077;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-add2:hover {
+    background-color: #0262a4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modal-dialog {
+        max-width: 90%;
+        margin: 10px auto;
+    }
+
+    .modal-header, .modal-body {
+        padding: 10px;
+    }
+
+    .btn-add2 {
+        padding: 8px 15px;
+    }
+}

@@ -36,16 +36,16 @@ const columns = [
 const data = [
   {
     id: 1,
-    title: 'Sample Task',
+    title: 'Caravan',
     date: '2024-09-20',
-    description: 'Completed',
+    description: 'Caravan Is Here',
     
   },
   {
     id: 2,
-    title: 'Sample Task 2',
+    title: 'Pasko Fiesta',
     date: '2024-09-21',
-    description: 'Progress',
+    description: 'Pasko Fiesta is Here',
     
   },
 ];

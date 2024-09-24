@@ -8,10 +8,9 @@ import { CalendarAddModal } from '../assets/hooks/Modals.jsx';
 function Calendar() {
   const [selectedDate, setSelectedDate] = useState('');
   const [showModal, setShowModal] = useState(false);
-  const [currentFilter, setCurrentFilter] = useState('0'); // Default to "All" option
+  const [currentFilter, setCurrentFilter] = useState('0');
 
   useEffect(() => {
-    // After component mounts, inject the dropdown into the custom button
     injectDropdownIntoCustomButton();
   }, []);
 

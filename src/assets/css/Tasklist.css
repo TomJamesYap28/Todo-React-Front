@@ -1,0 +1,149 @@
+.container {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+}
+
+.table-responsive {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #000000;
+}
+
+/* DataTable Specific Styling */
+.rdt_Table {
+    border: none;
+}
+
+.rdt_TableHeadRow {
+    background-color: #007bff;
+    color: blue;
+    font-size: 50px;
+    text-align: center;
+}
+
+.rdt_TableRow {
+    border-bottom: 1px solid #dee2e6; /* Adding a border to separate rows */
+}
+
+.rdt_TableCol {
+    padding: 10px;
+    font-size: 14px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.rdt_TableCell {
+    text-align: center;
+}
+
+.rdt_Pagination {
+    padding: 10px;
+    background-color: #f1f3f4;
+    border-top: 1px solid #dee2e6;
+}
+
+/* Status Badges */
+.status-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 12px;
+  display: inline-block;
+  text-align: center;
+  min-width: 80px;
+}
+
+/* Done Status */
+.status-badge.done {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+/* Progress Status */
+.status-badge.progress {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+/* Overdue Status */
+.status-badge.overdue {
+  background-color: #f8d7da; 
+  color: #721c24;
+}
+
+
+/* Add/Edit/Delete Button Styling */
+.btn-add, .btn-edit, .btn-delete {
+    background-color: #007bff;
+    color: white;
+    border-radius: 20px;
+    padding: 8px 15px;
+    font-size: 14px;
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.btn-add:hover, .btn-edit:hover, .btn-delete:hover {
+    background-color: #0056b3;
+}
+
+.btn-add {
+    background-color: #28a745;
+}
+
+.btn-add:hover {
+    background-color: #218838;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+/* Styling for Edit/Delete in Action Column */
+button {
+    background-color: transparent;
+    color: #007bff;
+    border: 1px solid #007bff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+    color: white;
+    border-color: #0056b3;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .btn-add {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .rdt_TableHeadRow {
+    font-size: 12px;
+  }
+
+  .rdt_TableCol {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .rdt_Pagination {
+    font-size: 12px;
+  }
+}

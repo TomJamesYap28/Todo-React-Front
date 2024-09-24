@@ -15,7 +15,7 @@ export const CalendarAddModal = ({ selectedDate, onClose }) => {
             </div>
             <div className="modal-body">
               <div className="taskForm">
-                <input type="hidden" defaultValue="add" name="trans" className="form-control"/>
+                <input type="hidden" defaultValue="add" name="trans" className="form-control" />
                 <div className="form-group">
                   <label htmlFor="date">Selected Date</label>
                   <input type="text" id="date" name="date" className="form-control" value={selectedDate} readOnly />
@@ -32,7 +32,7 @@ export const CalendarAddModal = ({ selectedDate, onClose }) => {
                   <label htmlFor="description">Description</label>
                   <textarea name="description" id="description" className="form-control" placeholder="Write Description here..." ></textarea>
                 </div>
-                <button type="button" className="btn btn-primary btn-add" name="add">Save</button>
+                <button type="button" className="btn-add2" name="add">Save</button>
               </div>
             </div>
           </div>

@@ -20,7 +20,11 @@ const columns = [
   },
   {
     name: 'Status',
-    selector: (row) => row.status,
+    cell: (row) => (
+      <span className={`status-badge ${row.status.toLowerCase()}`}>
+        {row.status}
+      </span>
+    ),
     sortable: true,
   },
   {
@@ -41,9 +45,9 @@ const columns = [
 const data = [
   {
     id: 1,
-    task: 'Sample Task',
+    task: 'Fix Printer',
     assignedTo: 'John Doe',
-    status: 'Completed',
+    status: 'Overdue',
     dueTo: '2024-09-20',
   },
 ];
